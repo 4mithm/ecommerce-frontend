@@ -1,0 +1,22 @@
+
+
+{
+
+    "idx":"d3523523235235",
+    "species":"orange",
+    "type":"Hardwood",
+    "description":"at [nodejs.internal.kHybridDispatch] (node:internal/event_target:814:20)at",
+    "price":100,
+    "cut":"Cut to Size",
+    "measurement":"ft",
+    "use":"floor",
+    "minLength":100,
+    "minWidth":23,
+    "minThickness":23,
+    "maxLength":32,
+    "maxWidth":253,
+    "maxThickness":253
+
+
+
+}
