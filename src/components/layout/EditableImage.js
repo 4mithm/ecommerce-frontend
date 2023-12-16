@@ -1,8 +1,11 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
 
-export default function EditableImage({link, setLink}) {
+import UserImage from "@/components/layout/UserImage";
 
+
+export default function EditableImage({link, setLink}) {
+  console.log(link)
   async function handleFileChange(ev) {
     const files = ev.target.files;
     if (files?.length === 1) {
@@ -32,7 +35,7 @@ export default function EditableImage({link, setLink}) {
   return (
     <>
       {link && (
-        <Image className="rounded-lg w-full h-full mb-1" src={link} width={250} height={250} alt={'avatar'} />
+        <UserImage link={link}/>
       )}
       {!link && (
         <div className="text-center bg-gray-200 p-4 text-gray-500 rounded-lg mb-1">

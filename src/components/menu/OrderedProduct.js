@@ -6,7 +6,7 @@ export default function OrderedProduct({index, product,onRemove}) {
   return (
     <div className="flex items-center gap-4 border-b py-4">
       <div className="w-24">
-        <Image width={240} height={240} src={product.image} alt={''} />
+        {/* <Image width={240} height={240} src={product.images[0]} alt={''} /> */}
       </div>
       <div className="grow">
         <h3 className="font-semibold">
@@ -29,18 +29,12 @@ export default function OrderedProduct({index, product,onRemove}) {
         )}       
       </div>
       <div className="text-lg font-semibold">
-        {product.price}
+      {'\u20B9'}{product.price}
       </div>
-      {!!onRemove && (
-        <div className="ml-2">
-          <button
-            type="button"
-            onClick={() => onRemove(parseInt(index))}
-            className="p-2">
-            <Trash />
-          </button>
-        </div>
-      )}
+               <div>
+                
+               </div>
+
     </div>
   );
 }

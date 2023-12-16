@@ -7,7 +7,10 @@ export const CartContext = createContext({});
 
 export function cartProductPrice(cartProduct) {
   const [h,w , t]=cartProduct.dimensions;
-  return parseFloat(cartProduct.price)* h*w*t;
+  const totalPrice= parseFloat(cartProduct.price)* h*w*t;
+  const roundedTotalPrice = totalPrice.toFixed(2);
+
+  return parseFloat(roundedTotalPrice);
 }
 
 

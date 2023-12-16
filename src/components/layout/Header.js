@@ -16,7 +16,7 @@ function AuthLinks({status, userName}) {
         </Link>
         <button
           onClick={() => signOut()}
-          className="bg-primary rounded-full text-white px-8 py-2">
+          className="bg-lime rounded-full text-white px-8 py-2">
           Logout
         </button>
       </>
@@ -26,7 +26,7 @@ function AuthLinks({status, userName}) {
     return (
       <>
         <Link href={'/login'}>Login</Link>
-        <Link href={'/register'} className="bg-primary rounded-full text-white px-8 py-2">
+        <Link href={'/register'} className="bg-lime rounded-full text-white px-8 py-2">
           Register
         </Link>
       </>
@@ -46,8 +46,8 @@ export default function Header() {
     userName = userName.split(' ')[0];
   }
   return (
-    <header>
-      <div className="flex items-center md:hidden justify-between">
+    <header className="relative">
+      <div className="flex items-center md:hidden justify-between fixed">
         <Link className="text-primary font-semibold text-2xl" href={'/'}>
           TIMBERCOM
         </Link>
@@ -80,7 +80,7 @@ export default function Header() {
       )}
       <div className="hidden md:flex items-center justify-between">
         <nav className="flex items-center gap-8 text-gray-500 font-semibold">
-          <Link className="text-primary font-semibold text-2xl" href={'/'}>
+          <Link className="text-lime font-semibold text-2xl" href={'/'}>
             TIMBERCOM
           </Link>
           <Link href={'/'}>Home</Link>

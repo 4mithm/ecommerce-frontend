@@ -42,6 +42,8 @@ export default function OrdersPage() {
               <div className="grow">
                 <div className="flex gap-2 items-center mb-1">
                   <div className="grow text-lg">{order.cartProducts[0].species}  ..........</div>
+                  <div className="text-gray-500 text-sm">{order.status}</div>
+                  <br/>
                   <div className="text-gray-500 text-sm">{dbTimeForHuman(order.createdAt)}</div>
                 </div>
                 <div className="text-gray-500 text-xs">

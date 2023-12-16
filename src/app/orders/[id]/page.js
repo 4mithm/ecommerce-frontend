@@ -5,6 +5,7 @@ import SectionHeaders from "@/components/layout/SectionHeaders";
 import OrderedProduct from "@/components/menu/OrderedProduct";
 import {useParams} from "next/navigation";
 import {useContext, useEffect, useState} from "react";
+import {TimeLine} from "@/components/layout/TimeLine";
 
 export default function OrderPage() {
   const {clearCart} = useContext(CartContext);
@@ -21,7 +22,7 @@ export default function OrderPage() {
       setLoadingOrder(true);
       fetch('/api/orders?_id='+id).then(res => {
         res.json().then(orderData => {
-          console.log(orderData);
+          // console.log(orderData);
           setOrder(orderData);
           setLoadingOrder(false);
         });
@@ -56,14 +57,14 @@ export default function OrderPage() {
             ))}
             <div className="text-right py-2 text-gray-500">
               Subtotal:
-              <span className="text-black font-bold inline-block w-8">{subtotal}</span>
+              <span className="text-black font-bold inline-block w-8">{'\u20B9'}{subtotal}</span>
               <br />
               Delivery:
-              <span className="text-black font-bold inline-block w-8">2000</span>
+              <span className="text-black font-bold inline-block w-8">{'\u20B9'}2000</span>
               <br />
               Total:
               <span className="text-black font-bold inline-block w-8">
-                {subtotal + 5}
+              {'\u20B9'}{subtotal + 2000}
               </span>
             </div>
           </div>
@@ -75,6 +76,8 @@ export default function OrderPage() {
               />
             </div>
           </div>
+       <h3>{order?.status}</h3>
+
         </div>
       )}
     </section>

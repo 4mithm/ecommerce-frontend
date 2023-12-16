@@ -1,11 +1,16 @@
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '*.googleusercontent.com',
+        hostname: 'lh3.googleusercontent.com',
+        pathname:"/**"
+
       },
+
       {
         protocol: 'https',
         hostname: 'timbercom.s3.amazonaws.com',
@@ -16,6 +21,18 @@ const nextConfig = {
         hostname: 'timbercom2.s3.amazonaws.com',
         pathname:"/**"
       },
+      {
+        protocol: 'https',
+        hostname: '*.googleusercontent.com',
+        pathname:"/**"
+
+      },
+      {
+        protocol: 'https',
+        hostname:"www.kasandbox.org",
+        pathaname:"/**"
+      }
+
     ]
   }
 }

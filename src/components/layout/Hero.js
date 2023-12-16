@@ -9,7 +9,7 @@ export default function Hero() {
         <h1 className="text-4xl font-semibold">
           Timber is a type of wood which has been processed into beams and planks. It is also known as “lumber” in
           US and Canada. .&nbsp;
-          <span className="text-primary">
+          <span className="text-lime">
             Timber
           </span>
         </h1>
@@ -21,7 +21,7 @@ export default function Hero() {
         </p>
         <div className="flex gap-4 text-sm">
           <Link href="/products">
-            <button className="flex justify-center bg-primary uppercase flex items-center gap-2 text-white px-4 py-2 rounded-full">
+            <button className="flex justify-center bg-lime uppercase flex items-center gap-2 text-white px-4 py-2 rounded-full">
               Order now
               <Right />
             </button>

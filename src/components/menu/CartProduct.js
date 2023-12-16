@@ -31,6 +31,9 @@ export default function CartProduct({index, product,onRemove}) {
       <div className="text-lg font-semibold">
       {'\u20B9'}{cartProductPrice(product)}
       </div>
+      <div>
+        
+      </div>
       {!!onRemove && (
         <div className="ml-2">
           <button
