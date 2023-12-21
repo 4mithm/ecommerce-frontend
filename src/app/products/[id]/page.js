@@ -65,6 +65,7 @@ export default function MenuPage() {
 			cut: product.cut,
 			measurement,
 			dimensions,
+			quantity:1,
 			price: product.price,
 		});
 		toast.success("Added to cart!");

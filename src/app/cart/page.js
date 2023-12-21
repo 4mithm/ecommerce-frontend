@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 
 export default function CartPage() {
 
-  const {cartProducts,removeCartProduct} = useContext(CartContext);
+  const {cartProducts,removeCartProduct,addQuantity, removeQuantity} = useContext(CartContext);
   const [address, setAddress] = useState({});
   const {data:profileData} = useProfile();
 
@@ -37,7 +37,7 @@ export default function CartPage() {
       setAddress(addressFromProfile);
     }
   }, [profileData]);
-
+// ---------------------------------------------------------------------------------------------
   function noNullValidation(v,text){
     if (!v){
       toast.error(`Please enter ${text}`)
@@ -112,7 +112,10 @@ export default function CartPage() {
             index={index.toString()}
             product={product}
             onRemove={removeCartProduct}
-            />
+            onAddQuantity={addQuantity}
+            onRemoveQuantity={removeQuantity}
+
+              />
           }
           )}
           <div className="py-2 pr-16 flex justify-end items-center">
@@ -124,7 +127,7 @@ export default function CartPage() {
             <div className="font-semibold pl-2 text-right">
             {'\u20B9'}{subtotal}<br />
             {'\u20B9'}2000<br />
-            {'\u20B9'}{subtotal + 2000}
+            {'\u20B9'}{(subtotal + 2000).toFixed(2)}
             </div>
           </div>
         </div>
@@ -135,7 +138,7 @@ export default function CartPage() {
               addressProps={address}
               setAddressProp={handleAddressChange}
             />
-            <button type="submit">Pay {'\u20B9'} {subtotal+2000}</button>
+            <button type="submit">Pay {'\u20B9'} {(subtotal + 2000).toFixed(2)}</button>
           </form>
         </div>
       </div>

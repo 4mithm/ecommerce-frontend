@@ -47,19 +47,6 @@ export const authOptions = {
 	],
 };
 
-// export async function isAdmin() {
-// 	const session = await getServerSession(authOptions);
-// 	const userEmail = session?.user?.email;
-// 	if (!userEmail) {
-// 		return false;
-// 	}
-// 	const userInfo = await UserInfo.findOne({ email: userEmail });
-// 	if (!userInfo) {
-// 		return false;
-// 	}
-// 	console.log('it is a admin login email ')
-// 	return userInfo.admin;
-// }
 
 const handler = NextAuth(authOptions);
 

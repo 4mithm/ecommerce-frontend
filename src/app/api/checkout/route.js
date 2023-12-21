@@ -63,7 +63,6 @@ export async function POST(req) {
     paid: false,
   });
 
-
 const successUrl = `${process.env.NEXTAUTH_URL}/orders/${orderDoc._id.toString()}?clear-cart=1`;
 const cancelUrl = `${process.env.NEXTAUTH_URL}/cart?canceled=1`;
 
